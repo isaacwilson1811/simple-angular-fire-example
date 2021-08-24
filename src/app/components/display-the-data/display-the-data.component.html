@@ -1,0 +1,17 @@
+<h2>Angular FireStore</h2>
+
+<div>
+  <label>Collection ID: </label>
+  <input type="text" [(ngModel)]="collectionName" />
+  <button (click)="getCollection(collectionName)">Read All Documents in this Collection</button>
+  <button (click)="createDocument(collectionName)">Add Test Document to this Collection</button>
+</div>
+
+<pre *ngIf="documents$ | async as documents; else message">
+{{documents | json}}
+</pre>
+<ng-template #message>
+<pre>
+{{outputMessage}}
+</pre>
+</ng-template>

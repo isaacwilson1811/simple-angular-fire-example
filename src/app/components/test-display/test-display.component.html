@@ -1,6 +1,0 @@
-<p>Angular Fire Test</p>
-<button (click)="createDocument()">Click to add a document to firestore</button>
-<p>Display Collection Of Documents:</p>
-<pre *ngIf="documents$ | async as documents" style="border: 1px solid black;">
-{{ documents | json}}
-</pre>
